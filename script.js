@@ -1,11 +1,19 @@
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
+const toggle = document.getElementById('toggle')
+const navbarShow = document.getElementById('navbar-list')
+
+    document.onclick = function(e){
+        if(e.target.id !== 'navbarShow' && e.target.id !== 'toggle')
+        {
+            toggle.classList.remove('active')
+            navbarShow.classList.remove('active')
+        }
+    }
+
+    toggle.onclick = function(){
+        toggle.classList.toggle('active')
+        navbarShow.classList.toggle('active')
+    }
+
 
 //Get the button
 var mybutton = document.getElementById("myBtn");
